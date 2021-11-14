@@ -218,11 +218,11 @@ section{
 
 .images {
   border-radius: 15px;
+  transition: .9s ease;
 }
 
 .images:hover {
   opacity: .8;
-  transition: .4s ease-in;
   box-shadow: 0 0 40px rgba(0,0,0,6);
 }
 
@@ -262,6 +262,7 @@ section{
   text-align: center;
   background-color: var(--primary-color);
   opacity: 1;
+  border-radius: 15px;
 }
 
 .numbertext {
@@ -279,7 +280,7 @@ section{
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .9s ease;
+  transition: .8s ease;
   background-color: var(--primary-color);
 }
 
@@ -406,8 +407,9 @@ section{
 
 
 .social h2 {
-  padding-bottom: 15px;
+  padding: 10px 0;
   text-decoration: underline;
+  text-shadow: 0 0 6px rgba(0,0,0,0.8);
 }
 
 .icons {
@@ -455,9 +457,16 @@ section{
       top: 30px;
     }
 
+    .social h2 {
+      font-size: 25px;
+      width: 100px;
+      text-align: center;
+      justify-content: center;
+    }
+
     .social {
       margin: 50px 0 0 0;
-      padding: 0;
+      padding: 0 100px;
     }
 
     #contact {
@@ -469,6 +478,16 @@ section{
       text-align: center;
       margin: 0;
       padding: 0;
+    }
+
+    .divider {
+      margin-top: 50px;
+      border-top: 4px solid var(--secondary-color);
+      border-bottom: 4px solid var(--secondary-color);
+      height: 50px;
+      width: 200px;
+      border-left: none;
+      border-right: none;
     }
    
   }
