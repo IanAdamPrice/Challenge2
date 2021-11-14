@@ -128,24 +128,46 @@ section{
 }
 
 .about {
-  padding: 100px;
-  margin-bottom: 100px;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   justify-content: center;
+  position: relative;
+  display: inline-block;
+  height: 5%;
+  top: 100px;
 }
 
+.about .img-back {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  left: 0px;
+}
+
+.about:hover img {
+  opacity: 0;
+}
+
+.about:hover .img-back {
+  display: inline;
+  background-color: var(--primary-color);
+  opacity: .9;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .7);
+}
+
+
 .about img {
-  display: block;
   width: 200px;
   border: 2px solid var(--secondary-color);
   border-radius: 50%;
   padding: 0px;
   margin-top: 100px;
   justify-content: center;
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, .7);
+  background-color: var(--secondary-color);
 }
 
-.about img:hover {
-  opacity: .5;
-}
 
 .aboutMe {
   margin-left: 100px;
@@ -153,7 +175,6 @@ section{
   margin-top: 200px;
   margin-right: 10px;
   width: 600px;
-  display: block;
 }
 
 .aboutMe h2 {
@@ -163,6 +184,7 @@ section{
   font-size: 70px;
   text-decoration: underline;
   text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, .4);
 }
 
 .aboutMe h1 {
@@ -172,23 +194,36 @@ section{
 
 .name {
   font-weight: bolder;
-  font-size: 45px;
+  font-size: 30px;
 }
 
 /* work sections styles start*/
 #work {
-  margin: 50px 0;
+  margin: auto;
+  position: relative;
+  
 }
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 80%;
   position: relative;
-  margin: auto;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
 }
 
 .mySlides {
   display: none;
+}
+
+.images {
+  border-radius: 15px;
+}
+
+.images:hover {
+  opacity: .8;
+  transition: .4s ease-in;
+  box-shadow: 0 0 40px rgba(0,0,0,6);
 }
 
 .prev, .next {
@@ -216,22 +251,22 @@ section{
 }
 
 .text {
-  color: #f2f2f2;
+  color: var(--secondary-color);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 5px;
-  width: 200px;
+  bottom: 4px;
+  right: 895px;
   height: 50px;
+  width: 200px;
   text-align: center;
-  right: 893px;
   background-color: var(--primary-color);
   opacity: 1;
 }
 
 .numbertext {
   color: var(--primary-color);
-  font-size: 12px;
+  font-size: 13px;
   padding: 8px 12px;
   position: absolute;
 }
@@ -244,7 +279,7 @@ section{
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: .9s ease;
   background-color: var(--primary-color);
 }
 
@@ -307,6 +342,7 @@ section{
 
 .contact-form h2 {
   text-decoration: underline;
+  padding-bottom: 10px;
 }
 
 .contact-form h3 {
@@ -332,8 +368,7 @@ section{
 }
 
 .contact-form button {
-  
-  border: none;
+  border: 1px solid var(--primary-color);
   border-radius: 15px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -346,6 +381,14 @@ section{
   background-color: var(--primary-color);
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, .7);
+}
+
+.divider {
+  display: block;
+  border-left: 4px solid var(--secondary-color);
+  border-right: 4px solid var(--secondary-color);
+  width: 10%;
 }
 
 .social {
@@ -357,6 +400,8 @@ section{
   text-align: center;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, .7);
+  justify-content: center;
 }
 
 
@@ -365,7 +410,13 @@ section{
   text-decoration: underline;
 }
 
+.icons {
+  padding: 12px;
+}
 
+.icons:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
 
 
 
@@ -386,10 +437,15 @@ section{
       margin-bottom: 0;
     }
 
+  
     .aboutMe {
-      margin: 0 0 0 0;
+      margin: 100px;
+  
     }
 
+    .aboutMe h1 {
+      font-size:medium
+    }
     .topnav {
       display: inline;
       flex-direction: row;
@@ -400,10 +456,11 @@ section{
     }
 
     .social {
-      margin: 0;
+      margin: 50px 0 0 0;
+      padding: 0;
     }
 
-    .contact {
+    #contact {
       justify-content: center;
     }
 
