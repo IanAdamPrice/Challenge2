@@ -4,7 +4,6 @@
         <meta charset="UTF-8" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <title> Ian Price - Portfolio </title>
-        <script src="./assets/js/portfolio.js"></script>
     </head>
     
     <body>
@@ -156,36 +155,8 @@
                 &copy; 2021   | designed and coded by Ian Price
             </div>
         </footer>
+        <script src="./assets/js/portfolio.js"></script>
     </body>
     
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }       
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-    </script>
+    
 </html>
