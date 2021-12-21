@@ -226,6 +226,7 @@ section{
   box-shadow: 0 0 40px rgba(0,0,0,6);
 }
 
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -261,7 +262,6 @@ section{
   width: 200px;
   text-align: center;
   background-color: var(--primary-color);
-  opacity: 1;
   border-radius: 15px;
 }
 
@@ -270,6 +270,8 @@ section{
   font-size: 13px;
   padding: 8px 12px;
   position: absolute;
+  opacity: 0;
+  transition: .8s ease;
 }
 
 .texxt {
@@ -285,6 +287,10 @@ section{
 }
 
 .mySlides:hover .texxt {
+  opacity: 1;
+}
+
+.mySlides:hover .numbertext {
   opacity: 1;
 }
 
